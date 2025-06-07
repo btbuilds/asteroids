@@ -32,7 +32,7 @@ def main():
                 return
         
         updatable.update(dt)
-        
+
         # check if player hits an asteroid
         for x in asteroids:
             if x.collision_check(player):
@@ -43,7 +43,7 @@ def main():
         for x in asteroids: 
             for y in shots:
                 if x.collision_check(y):
-                    x.kill()
+                    x.split()
                     y.kill()
 
         screen.fill("black")
